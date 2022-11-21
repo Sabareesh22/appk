@@ -1,34 +1,38 @@
-package com.example.myapplication;
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-import androidx.appcompat.app.AppCompatActivity;
-import java.lang.Math; //importing Math class in Java
-import java.util.List;
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="372dp"
+        android:layout_height="100dp"
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
 
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button chg=findViewById(R.id.change);
-        TextView hello=findViewById(R.id.hello);
-        Toast.makeText(getApplicationContext(), "Poda Panni", Toast.LENGTH_SHORT).show();
-        chg.setOnClickListener(new View.OnClickListener() {
-            //to change hello world to welcome to android
-            @Override
-            public void onClick(View v) {
-                    hello.setText("Welcome to Android");
-
-                   }
+    <Button
+        android:id="@+id/change"
+        android:text="Change"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_width="137dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.465" />
 
 
-        });
-        }
-    }
+</androidx.constraintlayout.widget.ConstraintLayout>
